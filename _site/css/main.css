@@ -37,6 +37,7 @@ h2 ~ p{
   left: 0px;
   padding-top: 10px;
   position: relative;
+  left: -30px;
   text-align: center;
   width: 10vh;
 }
