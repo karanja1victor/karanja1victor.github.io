@@ -5,11 +5,15 @@ function activateGallery(){
     let title       = document.querySelector(".title");
     let description = document.querySelector(".description");
 
+    
+
     thumbnails.forEach(thumbnail => {
+        let newImageSrc  = thumbnail.dataset.largeVersion;
+        let largeVersion = new Image();
+        largeVersion.src = newImageSrc;
         thumbnail.addEventListener("click", function(){
-            let imgSrc = thumbnail.dataset.largeVersion;
             let imgAlt = thumbnail.alt;
-            mainImage.setAttribute("src", imgSrc);
+            mainImage.setAttribute("src", newImageSrc);
             mainImage.setAttribute("alt", imgAlt);
 
             //remove current class
